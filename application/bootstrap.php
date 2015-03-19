@@ -120,15 +120,16 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'minion'     => MODPATH.'minion',     // CLI Tasks
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	// 'auth'       		=> MODPATH.'auth',       // Basic authentication
+	// 'cache'      		=> MODPATH.'cache',      // Caching with multiple backends
+	// 'codebench'  		=> MODPATH.'codebench',  // Benchmarking tool
+	   'database'   		=> MODPATH.'database',   // Database access
+	// 'image'      		=> MODPATH.'image',      // Image manipulation
+	   'flexiblemigrations' => MODPATH.'flexiblemigrations',
+	   'minion'     		=> MODPATH.'minion',     // CLI Tasks
+	   'orm'        		=> MODPATH.'orm',        // Object Relationship Mapping
+	// 'unittest'   		=> MODPATH.'unittest',   // Unit testing
+	// 'userguide'  		=> MODPATH.'userguide',  // User guide and API documentation
 	));
 
 /**
@@ -139,6 +140,7 @@ Kohana::modules(array(
  * uncomment the line below and define a preferrably long salt.
  */
 // Cookie::$salt = NULL;
+Cookie::$salt = 'any value';
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of

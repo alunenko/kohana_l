@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `News`
 `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'When was changed',
 PRIMARY KEY `pk_id` (`id`),
 UNIQUE INDEX `ui_alias` (`alias`),
-INDEX `i_fk_image_id` (`image_id`),
+INDEX `fk_image_id` (`image_id`),
 INDEX `i_created_at` (`created_at`),
 INDEX `i_updated_at` (`updated_at`)
 ) DEFAULT CHARSET='utf8' COLLATE='utf8_general_ci' ENGINE=InnoDB COMMENT 'News content';
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `Gallery`
 `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'When was changed',
 PRIMARY KEY `pk_id` (`id`),
 UNIQUE INDEX `ui_alias` (`alias`),
-INDEX `i_fk_image_id` (`image_id`),
+INDEX `fk_image_id` (`image_id`),
 INDEX `i_status` (`status`),
 INDEX `i_created_at` (`created_at`),
 INDEX `i_updated_at` (`updated_at`)
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `Post`
 `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'When was changed',
 PRIMARY KEY `pk_id` (`id`),
 UNIQUE INDEX `ui_alias` (`alias`),
-INDEX `i_fk_image_id` (`image_id`),
+INDEX `fk_image_id` (`image_id`),
 INDEX `i_status` (`status`),
 INDEX `i_created_at` (`created_at`),
 INDEX `i_updated_at` (`updated_at`)
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `Product`
 `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'When was changed',
 PRIMARY KEY `pk_id` (`id`),
 UNIQUE INDEX `ui_alias` (`alias`),
-INDEX `i_fk_image_id` (`image_id`),
+INDEX `fk_image_id` (`image_id`),
 INDEX `i_status` (`status`),
 INDEX `i_created_at` (`created_at`),
 INDEX `i_updated_at` (`updated_at`)

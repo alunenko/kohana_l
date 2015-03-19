@@ -1,21 +1,24 @@
-# kohana_l
+1. Read documentation http://kohanaframework.org/3.0/guide
+  a. install from https://github.com/kohana/kohana
+    i. git clone git://github.com/kohana/kohana.git
+    ii. cd kohana/
+    iii. git submodule init
+    iv. git submodule update
 
-# Kohana PHP Framework
+2. Проектирование РСУБД
+http://habrahabr.ru/post/194714/
+* вначале поста есть ссылки на предыдущие части
+** также, скаченный материал(PDF) по ссылкам есть корне “Руководство по проектированию реляционных баз данных”
+  a. Выделение сущностей
+  b. Приведение к 3нормальной форме (3НФ)
+  c. Денормализация
+  d. Определение типов данных
+  e. Создание миграции в фреймворке
+  f. Индексы
+  g. Связи
 
-[Kohana](http://kohanaframework.org/) is an elegant, open source, and object oriented HMVC framework built using PHP5, by a team of volunteers. It aims to be swift, secure, and small.
-
-Released under a [BSD license](http://kohanaframework.org/license), Kohana can be used legally for any open source, commercial, or personal project.
-
-## Documentation
-Kohana's documentation can be found at <http://kohanaframework.org/documentation> which also contains an API browser.
-
-The `userguide` module included in all Kohana releases also allows you to view the documentation locally. Once the `userguide` module is enabled in the bootstrap, it is accessible from your site via `/index.php/guide` (or just `/guide` if you are rewriting your URLs).
-
-## Reporting bugs
-If you've stumbled across a bug, please help us out by [reporting the bug](http://dev.kohanaframework.org/projects/kohana3/) you have found. Simply log in or register and submit a new issue, leaving as much information about the bug as possible, e.g.
-
-* Steps to reproduce
-* Expected result
-* Actual result
-
-This will help us to fix the bug as quickly as possible, and if you'd like to fix it yourself feel free to [fork us on GitHub](https://github.com/kohana) and submit a pull request!
+3. Написания запросов на SQL
+4. Создание скрипта БазыДанных (БД)
+  a. Установка миграционного модуля коханы
+    * используйте для создания таблиц кохана query builder
+    migration module https://github.com/ferpetrelli/kohana-flexible-migrations

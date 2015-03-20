@@ -138,12 +138,13 @@ class db_init extends Migration
 
     public function down()
     {
+        $this->drop_table('PageRelations');
         $this->drop_table('Image');
         $this->drop_table('Page');
         $this->drop_table('News');
         $this->drop_table('Gallery');
         $this->drop_table('Post');
         $this->drop_table('Product');
-        $this->drop_table('PageRelations');
+
     }
 }

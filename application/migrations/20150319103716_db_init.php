@@ -119,12 +119,20 @@ class db_init extends Migration
             CREATE TABLE  IF NOT EXISTS `PageRelations`
             (
                 `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary key',
-                `page_id` INT(11) NOT NULL COMMENT 'Page id',
-                `relation_id` INT(11) NOT NULL COMMENT 'Relations id',
+                `page_id` INT(11) UNSIGNED NOT NULL COMMENT 'Page id',
+                `relation_id` INT(11) UNSIGNED NOT NULL COMMENT 'Relations id',
                 `type` TINYINT(1) UNSIGNED NOT NULL COMMENT 'Type of page. See Enum_Relations',
                 PRIMARY KEY `pk_id` (`id`),
                 UNIQUE INDEX `ui_page_relations` (`page_id`, `relation_id`, `type`)
             ) DEFAULT CHARSET='utf8' COLLATE='utf8_general_ci' ENGINE=InnoDB COMMENT 'Page relation';
+        ");
+
+        $this->sql("
+            ALTER TABLE `PageRelations`
+                ADD CONSTRAINT `fk_page_id` FOREIGN KEY ( `page_id` )
+                REFERENCES `Page` ( `id` )
+                ON DELETE CASCADE
+                ON UPDATE CASCADE;
         ");
     }
 

@@ -151,3 +151,9 @@ Route::set('default', '(<controller>(/<action>(/<id>)))')
 		'controller' => 'welcome',
 		'action'     => 'index',
 	));
+Route::set('page', 'page(/<action>(/<id>)))')
+    ->defaults(array(
+        'controller' => 'page',
+        'action'     => 'index',
+    ));
+
